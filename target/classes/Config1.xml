@@ -5,12 +5,15 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
- http://www.springframework.org/schema/beans/spring-beans.xsd">
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd" >
 
 
 
-	<!-- This is our bean class -->
+	<!-- This is our bean class 1 -->
 	<bean class="com.springcore.SpringCore.Student" name="student1">
 		<property name="studentId">
 			<value>22345</value>
@@ -26,5 +29,25 @@
 		</property>
 
 	</bean>
+	<!-- Bean Class End -->
+	
+	
+	<!-- This is our bean class 2  Another method to declare values -->
+	<bean class="com.springcore.SpringCore.Student" name="student2">
+		<property name="studentId" value="420"  />
+			
+		<property name="studentName"  value="Swappy" />
+			
+		<property name="studentAddress" value="Pune,Maharashtra"  />
+			
+	</bean>
+	<!-- Bean Class 2 End -->
+	
+	<!-- This is our bean class 3 Another type to store value Simplest Way -->
+	<bean class="com.springcore.SpringCore.Student" name="student3" p:studentId="421" p:studentName="Swap" p:studentAddress="Newasa" />
+	<!-- Bean Class End -->
+	
+	<!-- This is our bean class 4 Another type to store value Simplest Way -->
+	<bean class="com.springcore.SpringCore.Student" name="student4" p:studentId="422" p:studentName="Swap4" p:studentAddress="Newasa" />
 	<!-- Bean Class End -->
 </beans>
