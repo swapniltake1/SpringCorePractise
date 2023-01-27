@@ -30,19 +30,16 @@ public class Lassi implements InitializingBean,DisposableBean  {
 	}
     
 	
-	public void init() 
-	{
-		System.out.println("Hii am inside the init method :");
-	}
+	
 	public void destroy() throws Exception {
 		// TODO Auto-generated method stub
-		System.out.println("Hiii my work is complete byee  !! ");
+		System.out.println("destroy method -- Bean Lifecycle using @interfaces ");
 		
 	}
 
-	public void afterPropertiesSet() throws Exception {
+	public void afterPropertiesSet() throws Exception {   //Init Method
 		// TODO Auto-generated method stub
-		System.out.println("hie this is afterPropertiesset method ");
+		System.out.println("afterPropertiesSet method -- Bean Lifecycle using @interfaces ");
 	}
 	
 	

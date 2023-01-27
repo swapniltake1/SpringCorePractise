@@ -10,6 +10,8 @@
  http://www.springframework.org/schema/beans/spring-beans.xsd
   http://www.springframework.org/schema/context
  http://www.springframework.org/schema/context/spring-context.xsd" >
+ 
+ <context:annotation-config />   <!-- For Activating @anootations  -->
 
 <bean class="com.springcore.lifecycle.Misal" name="misal1" init-method="init"  destroy-method="destroy" >
 
@@ -21,6 +23,8 @@
  <property name="price"  value="50" />
 </bean>
 
-
+<bean class="com.springcore.lifecycle.VadaPao" name="vadapao">
+   <property name="price" value="20"  />
+</bean>
 
 </beans>

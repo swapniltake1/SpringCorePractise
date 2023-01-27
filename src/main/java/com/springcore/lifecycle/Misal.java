@@ -23,11 +23,11 @@ public class Misal {
 	}
 	
 	public void init() {
-		System.out.println("Inside INit Method");
+		System.out.println("init Method -- Bean Lifecycle using @xml config declaratio");
 	}
 	
 	public void destroy() {
-		System.out.println("Inside destroy method");
+		System.out.println("destroy method -- Bean Lifecycle using @xml config declaration ");
 	}
 	
 }
