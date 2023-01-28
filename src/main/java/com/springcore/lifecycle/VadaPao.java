@@ -27,7 +27,7 @@ public class VadaPao {
 	
 	@PostConstruct
 	public void init() {
-		System.out.println("PostConstroct -- Bean Lifecycle using @annotations");
+		System.out.println("PostConstroct  -- Bean Lifecycle using @annotations");
 	}
 	
 	@PreDestroy
