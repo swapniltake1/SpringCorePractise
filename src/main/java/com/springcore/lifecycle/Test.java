@@ -10,7 +10,8 @@ public class Test {
 		
 		System.out.println("Hieee Test Class ");
 		
-	  AbstractApplicationContext context =	new ClassPathXmlApplicationContext("config-lifecycle.xml");
+	  @SuppressWarnings("resource")
+	AbstractApplicationContext context =	new ClassPathXmlApplicationContext("config-lifecycle.xml");
 	                             context.registerShutdownHook(); /// To enable destroy method when we used xml based lifecycle
 	       
 	         System.out.println("-------------------------------------------");
