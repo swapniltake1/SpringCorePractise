@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- NameSpace -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd" >
+ 
+ <bean class="com.springcore.constuctorinjection.Certificate" name="cer">
+ 
+ <constructor-arg value="Java Developer NareshIt Hyderabad"  />
+ 
+ </bean>
+
+<bean class="com.springcore.constuctorinjection.Person"  name="person1">
+ 
+  <constructor-arg value=" Swapnil "  />
+    <constructor-arg value=" 01 " type="int" />
+    <constructor-arg ref="cer" />
+    
+   
+</bean>
+
+<bean class="com.springcore.constuctorinjection.Addition" name="add1">
+    <constructor-arg  value="12" type="int" />
+    <constructor-arg  value="82" type="int" />
+</bean>
+
+<bean class="com.springcore.constuctorinjection.Addition" name="add2">
+    <constructor-arg  value="102.5" type="double" />
+    <constructor-arg  value="652.3" type="double" />
+</bean>
+
+<bean class="com.springcore.constuctorinjection.Addition" name="add3">
+    <constructor-arg  value="120" />  <!-- Alredy string string type which define string const. -->
+    <constructor-arg  value="822" />
+</bean>
+
+</beans>

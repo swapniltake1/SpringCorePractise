@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- NameSpace -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd" >
+ 
+ <context:annotation-config />
+
+<bean class="com.springcore.autowiring.annotations.Hotel" name="hotel">
+   <property name="vadapao" value="20"/>
+   <property name="misal" value="50"/>
+   <property name="vadasambar" value="40"/>
+   <property name="pohe" value="30"/>
+   <property name="idali" value="20"/>
+   <property name="chaha" value="10"/>
+   
+</bean>
+
+<bean class="com.springcore.autowiring.annotations.Bill" name="bill" autowire="byName" />
+
+
+
+</beans>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- NameSpace -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd
+ http://www.springframework.org/schema/util
+ http://www.springframework.org/schema/util/spring-util.xsd" >
+ 
+ <!-- Standalone list -->
+ 
+ <util:list list-class="java.util.LinkedList" id="friends">
+  <value>Akash</value>
+  <value>Abhi</value>
+  <value>Aniket</value>
+  <value>Baban</value>
+  <value>Rohit</value>
+  <value>Kunal</value>
+ </util:list>
+ 
+ <util:list list-class="java.util.LinkedList" id="staff">
+  <value>Manasi Mam</value>
+  <value>Abhijit Sir</value>
+  <value>Rasika Mam</value>
+  <value>Pooja Mam</value>
+  <value>Joshi Mam</value>
+  <value>Renuka Mam</value>
+ </util:list>
+ 
+ <!-- StandAlone Map -->
+ 
+ <util:map id="feesstrucher" >
+   <entry key="Computer" value="128000"/>
+   <entry key="Civil" value="122000"/>
+   <entry key="Mechanical" value="120000"/>
+   <entry key="Entc" value="123000"/>
+   <entry key="IT-AI" value="142000"/>
+   
+ </util:map>
+ 
+ <!-- Standalone Properties -->
+ 
+ <util:properties id="dbconfig">
+    <prop key="driver">com.mysql.jdbc.Driver</prop>
+      <prop key="username">root</prop>
+        <prop key="password">admin</prop>
+          <prop key="url">mysql:jdbc://127.0.0.1:3306/swapnildb</prop>
+ </util:properties>
+
+ <bean class="com.springcore.standalone.collections.Person" name="person1">
+    <property name="nameString" value="Swapnil" />
+     <property name="addressString" value="Newasa, Ahmednagar, Maharashtra 414603 " /> 
+     <property name="friendStrings" ref="friends"/>
+ </bean>
+ 
+ <bean class="com.springcore.standalone.collections.Person" name="person2">
+    <property name="nameString" value="Abhijit" />
+     <property name="addressString" value="Loni, Ahmednagar, Maharashtra 414603 " /> 
+     <property name="friendStrings" ref="friends"/>
+ </bean>
+ 
+ <bean class="com.springcore.standalone.collections.Institute" name="collage">
+   <property name="collagename" value="VACOEA"/>
+   <property name="staffname" ref="staff" />
+   <property name="feesstrucher" ref="feesstrucher" />
+   <property name="properties" ref="dbconfig" />
+   
+   
+ </bean>
+
+	
+</beans>

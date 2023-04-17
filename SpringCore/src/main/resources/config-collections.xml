@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- NameSpace -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd" >
+
+
+
+	<!-- This is our bean class 1 -->
+	<bean class="com.springcore.collections.Emp" name="emp1" >
+		
+		<property name="name" value="Swapppppppnil" /> 
+		
+		<property name="phones">
+		  <list>
+		       <value>1234567891</value>
+		       <value>1122514558</value>
+		       <value>4855462658</value>
+		       <value>8600789879</value>
+		       <null></null>
+		 </list>
+		</property>
+		<property name="address">
+		  <set>
+		    <value>Delhi</value>
+		    <value>Pune</value>
+		    <value>Mumbai</value>
+		    <value>Hyderabad</value>
+		    <value>Bangluru</value>
+		    <value>Chennai</value>
+		  </set>
+		</property>
+		<property name="courses">
+		   <map>
+		        <entry key="Java" value="3 Month"/>
+		        <entry key="Python" value="2 Month"/>
+		        <entry key="Frontend" value="6 Month"/>
+		        <entry key="Full stack Java or Python" value="6 Month"/>
+		        <entry key="Database Mysql or MongoDB" value="2 Month"/>
+		        
+		   </map>
+		</property>
+		<property name="props">
+		  <props>
+		   <prop key="Name"> Swapnil </prop>
+		   <prop key="ChannelName"> The Codebreaker - Youtube</prop>
+		   </props>
+		</property>
+		
+		</bean>
+</beans>
