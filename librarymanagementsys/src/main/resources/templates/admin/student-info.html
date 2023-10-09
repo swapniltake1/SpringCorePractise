@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Add your head content here -->
+</head>
+<body>
+    <h1>Student Information</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <td th:text="${student.name}"></td>
+        </tr>
+        <tr>
+            <th>Fine</th>
+            <td th:text="${fine}"></td>
+        </tr>
+        <tr>
+            <th>Phone</th>
+            <td th:text="${phone}"></td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td th:text="${email}"></td>
+        </tr>
+    </table>
+    <!-- Add more student information as needed -->
+</body>
+</html>

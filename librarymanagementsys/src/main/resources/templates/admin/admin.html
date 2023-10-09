@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Page</title>
+</head>
+<body>
+    <h1>Welcome, Admin!</h1>
+    <div>
+        <a th:href="@{/admin/students}">See All Students</a>
+    </div>
+    <div>
+        <a th:href="@{/admin/borrowed-books}">See All Borrowed Books with Fines</a>
+    </div>
+    <div>
+        <a th:href="@{/admin/books}">See All Books</a>
+    </div>
+    <div>
+        <a th:href="@{/admin/add-book}">Add Book</a>
+    </div>
+
+</body>
+</html>
